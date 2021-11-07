@@ -1,0 +1,136 @@
+/*Reset CSS pour avoir un fichier clean dés le début*/
+*,::before,::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  text-decoration: none;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+body{
+  font-family: Montserrat, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  width: auto;
+}
+
+.box{
+  width: 500px;
+  height: auto;
+  padding: 25px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 12px 12px 22px 22px rgba(0, 0, 0, 0.2);
+}
+
+.box h3{
+  color: #5260ad;
+}
+
+.title{
+  margin-bottom: 45px;
+  font-size: 28px;
+  color: #666;
+}
+
+form label{
+  font-size: 20px;
+  color: #aaa;
+  transition: 0.4s ease-out;
+  font-style: italic;
+}
+
+input{
+  display: block;
+  padding: 8px 0;
+  margin:10px 0;
+  width: 440px;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 3px solid #aaa;
+  color: #666;
+  transition: 0.4s ease-in-out;
+}
+
+#submit{
+  cursor: pointer;
+  margin-bottom: 65px;
+  margin-top: 50px;
+  display: block;
+  width: 440px;
+  padding: 15px 60px;
+  border: 3px solid #8b97d7;
+  border-radius: 999px;
+  background-image: linear-gradient(to right,transparent 50%,#5260ad 50%, #8b97d7);
+  background-size: 200%; /*Pour avoir 100% de transparent et 100% de couleur à droite*/
+  color: #8b97d7;
+  font-size: 24px;
+}
+#submit:hover{
+  color: white;
+  background-position: 100%; /*Ca va ramener la couleur de droite à gauche*/
+  border: 3px solid white;
+}
+
+.haveAccount a{
+  color: #8b97d7;
+  font-size: 16px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.haveAccount a:hover{
+  border-bottom-color: #8b97d7;
+}
+/*Lorsque l'on a un focus sur l'enfant donc sur l'input on va bouger au label*/
+form .formGroupe:focus-within label{
+  color: #8b97d7;
+}
+
+form .formGroupe:focus-within input{
+  border-bottom-color: #8b97d7;
+}
+
+@media screen and (min-width: 420px) and (max-width: 550px) {
+  .box{
+    width: 300px;
+    height: auto;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 12px 12px 22px 21px rgba(0, 0, 0, 0.2);
+  }
+  input{
+    display: block;
+    width: 240px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 3px solid #aaa;
+    color: #666;
+    transition: 0.4s ease-in-out;
+  }
+
+  #submit{
+    cursor: pointer;
+    margin-bottom: 65px;
+    margin-top: 50px;
+    display: block;
+    width: 240px;
+    padding: 15px 60px;
+    border: 3px solid #8b97d7;
+    border-radius: 999px;
+    background-image: linear-gradient(to right,transparent 50%,#5260ad 50%, #8b97d7);
+    background-size: 200%; /*Pour avoir 100% de transparent et 100% de couleur à droite*/
+    color: #8b97d7;
+    font-size: 24px;
+  }
+}
+
+

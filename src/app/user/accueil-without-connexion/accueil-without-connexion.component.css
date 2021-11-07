@@ -1,0 +1,56 @@
+/*Reset CSS pour avoir un fichier clean dés le début*/
+*,::before,::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  font-size: 100%;
+  font:inherit;
+}
+
+#accueil_background{
+  background-image: url("https://images.pexels.com/photos/1115680/pexels-photo-1115680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  height: 100vh; /*100% de l'écran*/
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 200px;
+}
+
+#accueil_background h1{
+  font-size: max(3vh,15px);
+}
+
+#accueil_background .button{
+  border: 2px white solid;
+  border-radius: 5px 20px 5px;
+  padding: 1%;
+}
+
+h1,.button,h3{
+  color: white;
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+
+.btnConnect{
+  text-decoration: underline;
+  color: peru;
+}
+
+.button{
+  display: block;
+  transition: 0.5s ease;
+}
+
+.button:hover{
+  background: darkgoldenrod;
+  color: black;
+}
+
+

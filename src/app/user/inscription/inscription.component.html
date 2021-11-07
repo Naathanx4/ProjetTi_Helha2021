@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<div class="box">
+  <form [formGroup]="form" (submit)="sendData()">
+    <h3 class="title">Inscrivez-vous</h3>
+    <div class="formGroupe">
+    <label>
+      Pseudo: <input type="text" name="pseudo" formControlName="pseudo">
+    </label>
+    </div>
+    <div class="formGroupe">
+    <label>
+      Mot de passe: <input type="password" name="password" formControlName="password">
+    </label>
+    </div>
+    <div class="formGroupe">
+    <label>
+      Comfirmer le mot de passe: <input type="password" name="comfirmPassword" formControlName="comfirmPassword">
+    </label>
+    </div>
+    <div class="formGroupe">
+    <label>
+      Mail: <input type="email" name="mail" formControlName="mail">
+    </label>
+    </div>
+    <div class="formGroupe">
+    <label>
+      Date de naissance: <input type="date" name="dateNaissance" formControlName="dateNaissance">
+    </label>
+    </div>
+    <input type="submit" value="S'inscrire" id="submit" [disabled]="form.invalid">
+
+    <h3 class="haveAccount">Vous possédez déjà un compte? <a href="#">Connectez-vous.</a></h3>
+
+  </form>
+</div>
+
+</body>
+</html>
